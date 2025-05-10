@@ -48,6 +48,7 @@ header .navdesktop ul li a {
   margin-right: 0;
 }
 header .mobile {
+  display: none;
   background: blue;
   position: fixed;
   top: 8rem;
