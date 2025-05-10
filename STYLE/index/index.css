@@ -14,7 +14,7 @@ header {
   border: 2px solid red;
   height: 10vh;
 }
-header nav {
+header .navdesktop {
   border: 2px solid green;
   display: flex;
   flex-direction: row;
@@ -26,11 +26,11 @@ header nav {
   height: 100%;
   color: #fff;
 }
-header nav h1 {
+header .navdesktop h1 {
   font-family: "Kaushan Script", cursive;
   font-size: 2rem;
 }
-header nav ul {
+header .navdesktop ul {
   border: 2px solid pink;
   display: flex;
   flex-direction: row;
@@ -39,31 +39,44 @@ header nav ul {
   text-align: center;
   gap: 5rem;
 }
-header nav ul li a {
+header .navdesktop ul li a {
   font-family: "Kaushan Script", cursive;
   font-size: 1.5rem;
   color: #fff;
+  text-align: center;
+  margin-left: 0;
+  margin-right: 0;
 }
 header .mobile {
-  display: none;
-  position: fixed;
-  top: 7rem;
-  left: 0;
-  width: 7rem;
-  height: 3rem;
-  border-radius: 0.5rem;
   background: blue;
-  border: 2px solid blue;
+  position: fixed;
+  top: 8rem;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Kaushan Script", cursive;
 }
-header .mobile .button-mobile h1, header .mobile i {
+header .mobile h1 {
+  font-family: "Kaushan Script", cursive;
   font-size: 1rem;
-  margin: 0 10px;
+  color: #fff;
+  text-align: center;
+  margin-left: 0;
+  margin-right: 0;
+}
+header .mobile i {
+  font-family: 1rem;
+  font-size: #fff;
+  color: center;
+  text-align: 0;
+  margin-left: 0.3rem;
+  margin-right: 0;
 }
 @media (max-width: 1100px) {
   header {
     background-color: pink;
   }
-  header nav ul {
+  header .navdesktop ul {
     display: none;
   }
   header .mobile {
