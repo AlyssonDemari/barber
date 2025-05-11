@@ -5,12 +5,10 @@
 header{
     position: relative;
     background-color: $header;
-    border: 2px solid red;
     height: 10vh;
     width: 100%;
     
     .navdesktop{
-        border: 2px solid green;
         @include center(row, space-around, center, center);
         width: 100%;
         height: 100%;
@@ -20,7 +18,6 @@ header{
 
 
         ul{
-            border: 2px solid pink; 
             @include center(row, center, center, center, 5rem);
 
             li a{ @include title($font1, 1.5rem, $white, center); }
@@ -50,7 +47,8 @@ header{
             top: 0rem;
             left: 0rem;
             border-radius: .3rem;
-            background: $green;
+            background: $header;
+            color: $white;
             width: 100%;
             height: 2rem;
             cursor: pointer;
@@ -72,7 +70,6 @@ header{
                 @include center(column, space-around, center, center);
                 width: 100%;
                 height: 100%;
-                border: 2px solid red;
 
                 li, li a{ 
                     @include title($font1, 1rem, $white, center);
@@ -103,8 +100,6 @@ header{
 
     @media (max-width: 1100px){
 
-        background-color: pink;
-
         .navdesktop ul{
             display: none;
         }
@@ -118,32 +113,27 @@ header{
 main{
     @include center(column, center, center, center);
     width: 100%;
-    border: 2px solid red;
     box-sizing: border-box;
     background-color: #777676;
 }
 
 article{
-    border: 2px solid green;
     max-width: 60rem;
     width: 100%;
     height: 100%;
     padding: 3rem;
 
     .container-article{
-        border: 2px solid blue;
         display: flex;
         flex-direction: column;
         gap: 2rem;
 
         .text p{
-            border: 2px solid red;
             @include title($fontText, 1.5rem, $black, center, 500, 0, 0);
         }
 
         .container-addres{
             @include center(row, center, flex-start , center);
-            border: 2px solid red;
 
             .item{
                 width: 100%;
