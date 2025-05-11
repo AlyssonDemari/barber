@@ -118,7 +118,6 @@ header{
 main{
     @include center(column, center, center, center);
     width: 100%;
-    height: 100vh;
     border: 2px solid red;
     box-sizing: border-box;
     background-color: #777676;
@@ -131,39 +130,55 @@ article{
     height: 100%;
     padding: 3rem;
 
-    .container-addres{
-        @include center(column, center, center, center);
-        flex-wrap: wrap;
-        border: 2px solid pink;
-        width: 100%;
-        height: 100%;
+    .container-article{
+        border: 2px solid blue;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
 
-
-        .itens{
-            @include center(row, space-around, flex-start, center);
+        .text p{
             border: 2px solid red;
-            width: 100%;    
-            height: 100%;
-            
+            @include title($fontText, 1.5rem, $black, center, 500, 0, 0);
+        }
+
+        .container-addres{
+            @include center(row, center, flex-start , center);
+            border: 2px solid red;
+
             .item{
-                border: 2px solid black;
                 width: 100%;
+                font-family: $fontText;
 
-                @include center(column, center, center, center, 10px);
-                @include title($fontText, 1.5rem, $white, center, 600);
-                p{ @include title($fontText, 1rem, $white, center, 100); }
+                h3{ @include title($fontText, 1.3rem, $white, center, 500, 0, 0); }
 
+                p{ @include title($fontText, .9rem, $white, center, 500, 0, 0); }
+            }
+        }
+
+        .buttons{
+            @include center(row, center, space-around, center, 10rem);
+        
+            button{
+                &:nth-child(1){
+                    @include black-button();
+                }
+        
+                &:nth-child(2){
+                    @include black-transparent();
+                }
             }
         }
     }
 
-
     @media (max-width: 700px){
-        .container-addres .itens{
-            @include center(column, center, center, center);
+
+        .container-article .container-addres{
+            flex-direction: column;
+            gap: 1rem;
         }
-      
 
-
+        .container-article .buttons{
+            @include center(column, center, center, center, 1rem);
+        }
     }
 }

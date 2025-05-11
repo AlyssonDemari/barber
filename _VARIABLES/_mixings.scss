@@ -43,3 +43,41 @@
       @content;
     }
 }
+
+@mixin black-button(){
+    width: 12rem;
+    height: 2.5rem;
+    border: none;
+    background: $black;
+    font-weight: 300;
+    color: $white;
+    transition: 1s all;
+    background-image: linear-gradient(to right, $black 50%, $white 50%);
+    background-size: 200%, 100%;
+    background-position: left bottom;
+    cursor: pointer;
+
+    &:hover{
+        background-position: right bottom;
+        color: $black;
+    }
+}
+
+@mixin black-transparent(){
+    width: 12rem;
+    height: 2.5rem;
+    border: 2px solid $white;
+    background: transparent;
+    font-weight: 300;
+    color: $white;
+    transition: 1s all;
+    background-image: linear-gradient(to right, transparent 50%, $white 50%);
+    background-size: 200%, 100%;
+    background-position: left bottom;
+    cursor: pointer;
+
+    &:hover{
+        background-position: right bottom;
+        color: $black;
+    }
+}
