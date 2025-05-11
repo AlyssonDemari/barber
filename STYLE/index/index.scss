@@ -7,6 +7,7 @@ header{
     background-color: $header;
     border: 2px solid red;
     height: 10vh;
+    width: 100%;
     
     .navdesktop{
         border: 2px solid green;
@@ -111,5 +112,58 @@ header{
         .mobile{
             display: flex;
         }
+    }
+}
+
+main{
+    @include center(column, center, center, center);
+    width: 100%;
+    height: 100vh;
+    border: 2px solid red;
+    box-sizing: border-box;
+    background-color: #777676;
+}
+
+article{
+    border: 2px solid green;
+    max-width: 60rem;
+    width: 100%;
+    height: 100%;
+    padding: 3rem;
+
+    .container-addres{
+        @include center(column, center, center, center);
+        flex-wrap: wrap;
+        border: 2px solid pink;
+        width: 100%;
+        height: 100%;
+
+
+        .itens{
+            @include center(row, space-around, flex-start, center);
+            border: 2px solid red;
+            width: 100%;    
+            height: 100%;
+            
+            .item{
+                border: 2px solid black;
+                width: 100%;
+
+                @include center(column, center, center, center, 10px);
+                @include title($fontText, 1.5rem, $white, center, 600);
+                p{ @include title($fontText, 1rem, $white, center, 100); }
+
+            }
+        }
+    }
+
+
+    @media (max-width: 700px){
+        .container-addres .itens{
+            @include center(column, center, center, center);
+        }
+      
+
+
     }
 }

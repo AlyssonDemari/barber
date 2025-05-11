@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +14,7 @@ header {
   background-color: #222;
   border: 2px solid red;
   height: 10vh;
+  width: 100%;
 }
 header .navdesktop {
   border: 2px solid green;
@@ -31,8 +33,18 @@ header .navdesktop h1 {
   font-size: 2rem;
   color: #fff;
   text-align: center;
+  font-weight: normal;
   margin-left: 0;
   margin-right: 0;
+  /*
+      fonte
+      tamanho
+      cor
+      alinhamento
+      grossura
+      margin left
+      margin right
+  */
 }
 header .navdesktop ul {
   border: 2px solid pink;
@@ -48,8 +60,18 @@ header .navdesktop ul li a {
   font-size: 1.5rem;
   color: #fff;
   text-align: center;
+  font-weight: normal;
   margin-left: 0;
   margin-right: 0;
+  /*
+      fonte
+      tamanho
+      cor
+      alinhamento
+      grossura
+      margin left
+      margin right
+  */
 }
 header .mobile {
   display: flex;
@@ -120,8 +142,18 @@ header .mobile .menu-mobile ul li, header .mobile .menu-mobile ul li a {
   font-size: 1rem;
   color: #fff;
   text-align: center;
+  font-weight: normal;
   margin-left: 0;
   margin-right: 0;
+  /*
+      fonte
+      tamanho
+      cor
+      alinhamento
+      grossura
+      margin left
+      margin right
+  */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -154,5 +186,104 @@ header .mobile .menu-mobile.active {
   }
   header .mobile {
     display: flex;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 0;
+  width: 100%;
+  height: 100vh;
+  border: 2px solid red;
+  box-sizing: border-box;
+  background-color: #777676;
+}
+
+article {
+  border: 2px solid green;
+  max-width: 60rem;
+  width: 100%;
+  height: 100%;
+  padding: 3rem;
+}
+article .container-addres {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 0;
+  flex-wrap: wrap;
+  border: 2px solid pink;
+  width: 100%;
+  height: 100%;
+}
+article .container-addres .itens {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  text-align: center;
+  gap: 0;
+  border: 2px solid red;
+  width: 100%;
+  height: 100%;
+}
+article .container-addres .itens .item {
+  border: 2px solid black;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  font-family: "Faculty Glyphic", sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  margin-left: 0;
+  margin-right: 0;
+  /*
+      fonte
+      tamanho
+      cor
+      alinhamento
+      grossura
+      margin left
+      margin right
+  */
+}
+article .container-addres .itens .item p {
+  font-family: "Faculty Glyphic", sans-serif;
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+  font-weight: 100;
+  margin-left: 0;
+  margin-right: 0;
+  /*
+      fonte
+      tamanho
+      cor
+      alinhamento
+      grossura
+      margin left
+      margin right
+  */
+}
+@media (max-width: 700px) {
+  article .container-addres .itens {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 0;
   }
 }/*# sourceMappingURL=index.css.map */

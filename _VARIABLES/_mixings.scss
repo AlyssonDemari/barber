@@ -18,17 +18,28 @@
     gap: $gap;
 }
 
-@mixin title($font: $font1, $size: 1rem, $color: $white, $aling: center, $margin-left:0, $margin-right: 0 ){
+@mixin title($font: $font1, $size: 1rem, $color: $white, $aling: center, $weight: normal, $margin-left:0, $margin-right: 0 ){
     font-family: $font;
     font-size: $size;
     color: $color;
     text-align: $aling;
+    font-weight: $weight;
     margin-left: $margin-left;
     margin-right: $margin-right;
+
+    /*
+        fonte
+        tamanho
+        cor
+        alinhamento
+        grossura
+        margin left
+        margin right
+    */
 }
 
 @mixin respond-to($breakpoint) {
     @media screen and (max-width: $breakpoint) {
       @content;
     }
-  }
+}
