@@ -59,12 +59,20 @@ header .mobile {
   text-align: center;
   gap: 0;
   width: 5rem;
-  height: 18rem;
+  height: 20rem;
   position: fixed;
   top: 1.5rem;
   left: 1rem;
   display: none;
+  transition: all 0.5s ease-in-out;
   overflow: hidden;
+}
+@media screen and (max-width: 450px) {
+  header .mobile {
+    top: 6rem;
+    left: 0;
+    transition: all 0.5s ease-in-out;
+  }
 }
 header .mobile .menu {
   display: flex;
@@ -105,14 +113,29 @@ header .mobile .menu-mobile ul {
   gap: 0;
   width: 100%;
   height: 100%;
+  border: 2px solid red;
 }
-header .mobile .menu-mobile ul li a {
+header .mobile .menu-mobile ul li, header .mobile .menu-mobile ul li a {
   font-family: "Kaushan Script", cursive;
   font-size: 1rem;
   color: #fff;
   text-align: center;
   margin-left: 0;
   margin-right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  gap: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+}
+header .mobile .menu-mobile ul li:hover, header .mobile .menu-mobile ul li a:hover {
+  background-color: #8F512B;
+  transition: all 0.5s ease-in-out;
 }
 header .mobile .menu-mobile.active {
   top: 1.8rem;

@@ -29,13 +29,19 @@ header{
     .mobile{
         @include center(column, space-around, center, center);
         width: 5rem;
-        height: 18rem;
+        height: 20rem;
         position: fixed;
         top: 1.5rem;
         left: 1rem;
         display: none;
-        
+        transition: all .5s ease-in-out;
         overflow: hidden;
+
+        @include respond-to(450px) {
+            top: 6rem;
+            left: 0;
+            transition: all .5s ease-in-out;
+        }
         
         .menu{
             @include center(column, space-around, center, center);
@@ -65,8 +71,22 @@ header{
                 @include center(column, space-around, center, center);
                 width: 100%;
                 height: 100%;
+                border: 2px solid red;
 
-                li a{ @include title($font1, 1rem, $white, center); }
+                li, li a{ 
+                    @include title($font1, 1rem, $white, center);
+                    @include center(column, space-around, center, center);
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    transition: all .5s ease-in-out;
+
+                    &:hover{
+                        background-color: $brown;
+                        transition: all .5s ease-in-out;
+                    }
+                }
+
             }
 
             &.active{

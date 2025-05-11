@@ -26,3 +26,9 @@
     margin-left: $margin-left;
     margin-right: $margin-right;
 }
+
+@mixin respond-to($breakpoint) {
+    @media screen and (max-width: $breakpoint) {
+      @content;
+    }
+  }
