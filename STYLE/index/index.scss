@@ -2,110 +2,42 @@
 @import "../../_VARIABLES/mixings.scss";
 
 
+
+html{
+    padding-bottom: 7rem;
+    background-color: #777676;
+}
+
 header{
-    position: relative;
-    background-color: $header;
-    height: 10vh;
+    position: fixed;
+    bottom: 1rem;
+
     width: 100%;
-    
-    .navdesktop{
-        @include center(row, space-around, center, center);
+    height: 4rem;
+    background-color: $header;
+    border-radius: 5rem;
+
+    .container{
+        position: absolute;
         width: 100%;
-        height: 100%;
-        color: $white;
+        height: 4rem;
+        border-radius: 5rem;
 
-        h1{ @include  title($font1, 2rem, $white, center); }
-
-
-        ul{
-            @include center(row, center, center, center, 5rem);
-
-            li a{ @include title($font1, 1.5rem, $white, center); }
-        }
-    }
-
-    .mobile{
-        @include center(column, space-around, center, center);
-        width: 5rem;
-        height: 20rem;
-        position: fixed;
-        top: 1.5rem;
-        left: 1rem;
-        display: none;
-        transition: all .5s ease-in-out;
-        overflow: hidden;
-
-        @include respond-to(450px) {
-            top: 6rem;
-            left: 0;
-            transition: all .5s ease-in-out;
-        }
-        
-        .menu{
-            @include center(column, space-around, center, center);
-            position: absolute;
-            top: 0rem;
-            left: 0rem;
-            border-radius: .3rem;
-            background: $header;
-            color: $white;
+        .itens{
+            @include  center(row, space-around, center, center);
             width: 100%;
-            height: 2rem;
-            cursor: pointer;
-            z-index: 5;
-            user-select: none;
-        }
+            height: 4rem;
+            border-radius: 5rem;
 
-        .menu-mobile{
-            position: absolute;
-            top: -10rem;
-            left: 0rem;
-            width: 100%;
-            height: 15rem;
-            transition: all 1s;
-            visibility: hidden;
-            opacity: 0;
+            i{
+                color: $white;
+                padding: 1rem;
+                border-radius: 50%;
 
-            ul{
-                @include center(column, space-around, center, center);
-                width: 100%;
-                height: 100%;
-
-                li, li a{ 
-                    @include title($font1, 1rem, $white, center);
-                    @include center(column, space-around, center, center);
-                    width: 100%;
-                    height: 100%;
-                    text-align: center;
-                    transition: all .5s ease-in-out;
-
-                    &:hover{
-                        background-color: $brown;
-                        transition: all .5s ease-in-out;
-                    }
+                &.active{
+                    background-color: $green;
                 }
-
             }
-
-            &.active{
-                top: 1.8rem;
-                background: blue;
-                border-radius: .3rem;
-                transition: all 1s;
-                visibility: visible;
-                opacity: 1;
-            }
-        }
-    }
-
-    @media (max-width: 1200px){
-
-        .navdesktop ul{
-            display: none;
-        }
-
-        .mobile{
-            display: flex;
         }
     }
 }
@@ -114,7 +46,6 @@ main{
     @include center(column, center, center, center);
     width: 100%;
     box-sizing: border-box;
-    background-color: #777676;
 }
 
 article{
@@ -128,8 +59,21 @@ article{
         margin-bottom: 2rem;
         //position: relative;
         width: 70%;
-        height: 30vh;
+        height: 38vh;
         overflow: hidden;
+
+        &::before{
+            content: 'Art de Quebrada';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3rem;
+            z-index:1;
+            font-family: $font1;
+            font-size: 2rem;
+            color: $white;
+        }
         
         .container-item{
             //position: absolute;
@@ -140,13 +84,9 @@ article{
 
             transition: transform 0.5s ease-in-out;
             .item{
-                flex: 0 0 100%; /* Cada item ocupa 100% do container (1 item visível) */
-                min-width: 100%; /* Garante que o item ocupe toda a largura */
+                flex: 0 0 100%; /* alterar caso adicione novas fotos) */
+                min-width: 100%;
                 height: 100%;
-
-                // &:nth-child(1){
-                //     margin-left: -50% ;
-                // }
 
                 img{
                     width: 100%;
@@ -163,7 +103,9 @@ article{
         gap: 2rem;
 
         .text p{
-            @include title($fontText, 1.5rem, $white, center, 500, 0, 0);
+            @include title($fontText, 1.5rem, $white, justify, 500, 0, 0);
+            border: 2px solid red;
+            padding: .8rem;
         }
 
         .container-addres{
@@ -178,23 +120,16 @@ article{
                 p{ @include title($fontText, .9rem, $white, center, 500, 0, 0); }
             }
         }
-
-        .buttons{
-            @include center(row, center, space-around, center, 10rem);
-        
-            button{
-                &:nth-child(1){
-                    @include black-button();
-                }
-        
-                &:nth-child(2){
-                    @include black-transparent();
-                }
-            }
-        }
     }
 
     @media (max-width: 700px){
+        padding: 0;
+
+        .container-slide{
+            width: 100%;
+
+            border-radius: 0 0 1rem 1rem;
+        }
 
         .container-article .container-addres{
             flex-direction: column;
@@ -203,46 +138,6 @@ article{
 
         .container-article .text p{
             font-size: 1rem;
-        }
-
-        .container-article .buttons{
-            @include center(column, center, center, center, 1rem);
-        }
-    }
-}
-
-.servicos{
-    @include center(column, flex-start, center, center);
-    border: 2px solid red;
-    width: 100%;
-    height: 100vh;
-
-    .text{
-        @include center(column, center, center, center, 3rem);
-        height: 10rem;
-        
-        h1{ @include title($font1, 2rem, $white, center, 500); }
-        
-        p{ @include title($fontText, 1rem, $white, center, 500); }
-    }
-
-    .toggle{
-        border: 2px solid red;
-
-        .item{
-            @include center(row, space-between, center, center);
-            
-            border: 2px solid red;
-
-            h3{
-                @include title($fontText, 1.5rem, $white, center, 500);
-            }
-
-            i{
-                margin-right: 2rem;
-                font-size: 2rem;
-                color: $white;
-            }
         }
     }
 }

@@ -1,9 +1,12 @@
-const menu = document.querySelector('.menu');
-
-menu.addEventListener('click', () => {
-    const menuMobile = document.querySelector('.menu-mobile');
-    menuMobile.classList.toggle('active');
+document.querySelectorAll('.itens a').forEach(link => {
+    link.addEventListener('click', function() {
+        document.querySelectorAll('.itens i').forEach(icon => {
+            icon.classList.remove('active');
+        });
+        this.querySelector('i').classList.add('active');
+    });
 });
+
 
 const images = [
     { 'id': '1', 'url': 'corte1.jpg' },
