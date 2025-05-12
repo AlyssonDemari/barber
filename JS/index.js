@@ -38,3 +38,12 @@ const updateCarousel = () => {
 };
 
 setInterval(nextSlide, 2000);
+ 
+
+const toggle = document.querySelector('.toggle');
+
+toggle.addEventListener('click', () => {
+    const item = document.querySelector('.item i');
+    item.classList.toggle('fa-toggle-on');
+    item.classList.toggle('fa-toggle-off');
+});
