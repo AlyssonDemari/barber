@@ -199,7 +199,6 @@ section{
 
     .buttons{
         @include center(row, space-between, center, center, 2rem);
-        border: 2px solid red;
 
            button{
             @include black-transparent();

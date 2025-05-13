@@ -282,7 +282,6 @@ section .buttons {
   align-items: center;
   text-align: center;
   gap: 2rem;
-  border: 2px solid red;
 }
 section .buttons button {
   width: 12rem;
