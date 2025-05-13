@@ -101,10 +101,10 @@ article{
         display: flex;
         flex-direction: column;
         gap: 2rem;
+        padding-bottom: 5rem;
 
         .text p{
             @include title($fontText, 1.5rem, $white, justify, 500, 0, 0);
-            border: 2px solid red;
             padding: .8rem;
         }
 
@@ -139,5 +139,50 @@ article{
         .container-article .text p{
             font-size: 1rem;
         }
+    }
+}
+
+article .container-servicos{
+    @include center(column, center, center, center, 3rem);
+    width: 100%;
+    height: 50vh;
+    background: url(../../IMAGES/scissors.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    
+    
+    h1{
+        @include title($font1, 2rem, $black, center, 500, 0, 0);
+    }
+
+    .container-itens{
+        @include center(column, space-between, center, center, 1rem);
+        width: 100%;
+
+        .item{
+            width: 100%;
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+            background-color: transparent;
+
+            .visible{
+                @include center(row, space-between, center, center);
+                margin: .5rem 1rem;
+
+                i{
+                    font-size: 1.5rem;
+                }
+            }
+
+            .hidden{
+                display: none;
+                p{
+                    align-items: justify;
+                    width: 100%;
+                    font-size: 1rem;
+                    margin-top: 1rem;
+                }
+            }
+        }
+        
     }
 }

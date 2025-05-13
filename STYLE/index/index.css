@@ -109,6 +109,7 @@ article .container-article {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  padding-bottom: 5rem;
 }
 article .container-article .text p {
   font-family: "Faculty Glyphic", sans-serif;
@@ -127,7 +128,6 @@ article .container-article .text p {
       margin left
       margin right
   */
-  border: 2px solid red;
   padding: 0.8rem;
 }
 article .container-article .container-addres {
@@ -193,4 +193,71 @@ article .container-article .container-addres .item p {
   article .container-article .text p {
     font-size: 1rem;
   }
+}
+
+article .container-servicos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 3rem;
+  width: 100%;
+  height: 50vh;
+  background: url(../../IMAGES/scissors.jpg) no-repeat 50% 50%;
+  background-size: cover;
+}
+article .container-servicos h1 {
+  font-family: "Kaushan Script", cursive;
+  font-size: 2rem;
+  color: #000;
+  text-align: center;
+  font-weight: 500;
+  margin-left: 0;
+  margin-right: 0;
+  /*
+      fonte
+      tamanho
+      cor
+      alinhamento
+      grossura
+      margin left
+      margin right
+  */
+}
+article .container-servicos .container-itens {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  width: 100%;
+}
+article .container-servicos .container-itens .item {
+  width: 100%;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  background-color: transparent;
+}
+article .container-servicos .container-itens .item .visible {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 0;
+  margin: 0.5rem 1rem;
+}
+article .container-servicos .container-itens .item .visible i {
+  font-size: 1.5rem;
+}
+article .container-servicos .container-itens .item .hidden {
+  display: none;
+}
+article .container-servicos .container-itens .item .hidden p {
+  align-items: justify;
+  width: 100%;
+  font-size: 1rem;
+  margin-top: 1rem;
 }/*# sourceMappingURL=index.css.map */

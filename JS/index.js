@@ -7,7 +7,6 @@ document.querySelectorAll('.itens a').forEach(link => {
     });
 });
 
-
 const images = [
     { 'id': '1', 'url': 'corte1.jpg' },
     { 'id': '2', 'url': 'corte2.jpg' },
@@ -43,10 +42,37 @@ const updateCarousel = () => {
 setInterval(nextSlide, 2000);
  
 
-const toggle = document.querySelector('.toggle');
+const items = document.querySelectorAll('.container-itens .item');
 
-toggle.addEventListener('click', () => {
-    const item = document.querySelector('.item i');
-    item.classList.toggle('fa-toggle-on');
-    item.classList.toggle('fa-toggle-off');
+items.forEach(item => {
+    item.addEventListener('click', () => {
+        // Primeiro, desativa todos os outros itens
+        items.forEach(otherItem => {
+            if (otherItem !== item) { // Não mexa no item que está sendo clicado
+                const otherIcon = otherItem.querySelector('i');
+                const otherHidden = otherItem.querySelector('.hidden');
+                
+                otherIcon.classList.remove('fa-toggle-on');
+                otherIcon.classList.add('fa-toggle-off');
+                otherHidden.style.display = 'none';
+                otherItem.style.backgroundColor = '';
+            }
+        });
+
+        // Agora, alterna o estado do item clicado
+        const icon = item.querySelector('i');
+        const hidden = item.querySelector('.hidden');
+        const color = "2222227c";
+        
+        icon.classList.toggle('fa-toggle-off');
+        icon.classList.toggle('fa-toggle-on');
+        
+        hidden.style.display = (hidden.style.display === 'block') ? 'none' : 'block';
+        
+        if (icon.classList.contains('fa-toggle-on')) {
+            item.style.backgroundColor = '#' + color;
+        } else {
+            item.style.backgroundColor = '';
+        }
+    });
 });
