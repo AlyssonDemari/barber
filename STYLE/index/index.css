@@ -275,7 +275,16 @@ section .container-servicos .container-itens .item .hidden p {
   font-size: 1rem;
   margin-top: 1rem;
 }
-section button {
+section .buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  border: 2px solid red;
+}
+section .buttons button {
   width: 12rem;
   height: 2.5rem;
   border: 2px solid #fff;
@@ -289,11 +298,11 @@ section button {
   cursor: pointer;
   margin-top: 2rem;
 }
-section button:hover {
+section .buttons button:hover {
   background-position: right bottom;
   color: #000;
 }
-section button:nth-child(2) {
+section .buttons button:nth-child(2) {
   width: 12rem;
   height: 2.5rem;
   border: none;
@@ -306,25 +315,31 @@ section button:nth-child(2) {
   background-position: left bottom;
   cursor: pointer;
 }
-section button:nth-child(2):hover {
+section .buttons button:nth-child(2):hover {
   background-position: right bottom;
   color: #000;
 }
-section button:nth-child(2) a {
+section .buttons button:nth-child(2) a {
   color: #fff;
   transition: all 0.5s;
 }
-section button:nth-child(2) a:hover {
+section .buttons button:nth-child(2) a:hover {
   color: #000;
   transition: all 0.5s;
 }
-section button a {
+section .buttons button a {
   color: #fff;
   transition: all 0.5s;
 }
-section button a:hover {
+section .buttons button a:hover {
   color: #000;
   transition: all 0.5s;
+}
+@media (max-width: 700px) {
+  section .buttons {
+    flex-direction: column;
+    gap: 0;
+  }
 }
 
 section.map {
