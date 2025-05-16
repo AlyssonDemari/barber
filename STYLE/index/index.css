@@ -305,18 +305,30 @@ section .buttons button:nth-child(2) {
   width: 12rem;
   height: 2.5rem;
   border: none;
+<<<<<<< HEAD
   background: #101010;
   font-weight: 300;
   color: #fff;
   transition: 1s all;
   background-image: linear-gradient(to right, #101010 50%, #fff 50%);
+=======
+  background: #000;
+  font-weight: 300;
+  color: #fff;
+  transition: 1s all;
+  background-image: linear-gradient(to right, #000 50%, #fff 50%);
+>>>>>>> 8f273e3c9e08b48a41f36975eb449c0885403782
   background-size: 200%, 100%;
   background-position: left bottom;
   cursor: pointer;
 }
 section .buttons button:nth-child(2):hover {
   background-position: right bottom;
+<<<<<<< HEAD
   color: #101010;
+=======
+  color: #000;
+>>>>>>> 8f273e3c9e08b48a41f36975eb449c0885403782
 }
 section .buttons button:nth-child(2) a {
   color: #fff;
