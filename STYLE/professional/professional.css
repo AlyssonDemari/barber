@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1rem;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  padding-bottom: 7rem;
+  background-color: #3E342B;
+}
+
+header {
+  position: fixed;
+  bottom: 1rem;
+  width: 100%;
+  height: 4rem;
+  background-color: #D4A053;
+  border-radius: 5rem;
+}
+header .container {
+  position: absolute;
+  width: 100%;
+  height: 4rem;
+  border-radius: 5rem;
+}
+header .container .itens {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  gap: 0;
+  width: 100%;
+  height: 4rem;
+  border-radius: 5rem;
+}
+header .container .itens i {
+  color: #fff;
+  padding: 1rem;
+  border-radius: 50%;
+}
+header .container .itens i.active {
+  background-color: #8F512B;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 0;
+  border: 2px solid red;
+  height: 100vh;
+  width: 100%;
+}
+
+.container-user {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 0.1rem;
+  width: 100%;
+}
+.container-user .user {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 0;
+  position: relative;
+  padding-inline: 1rem;
+  width: 100%;
+  height: 5rem;
+  background-color: #D4A053;
+}
+.container-user .user .hover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 0;
+  position: absolute;
+  top: 5rem;
+  display: none;
+  left: 0;
+  background-color: #D4A053;
+  z-index: 9999;
+  padding: 1rem;
+}
+.container-user .user .hover .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+.container-user .user .hover .info button {
+  border: none;
+  background: transparent;
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+.container-user .user .hover .container-slide {
+  width: 80%;
+  height: 20vh;
+  overflow: hidden;
+}
+.container-user .user .hover .container-slide .container-item {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+.container-user .user .hover .container-slide .container-item .item {
+  flex: 0 0 100%; /* alterar caso adicione novas fotos) */
+  min-width: 100%;
+  height: 100%;
+}
+.container-user .user .hover .container-slide .container-item .item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.3rem;
+}
+.container-user .user .hover.active {
+  display: block;
+}
+.container-user .user .img i {
+  font-size: 3rem;
+}/*# sourceMappingURL=professional.css.map */

@@ -1,0 +1,65 @@
+/* agendar_corte.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #1f1c2c, #928dab);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+label {
+    font-weight: 600;
+    margin-top: 10px;
+    display: block;
+}
+
+input[type="date"],
+input[type="time"],
+select,
+button {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+button {
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: #5848e5;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+select {
+    background-color: #f9f9f9;
+    color: #333;
+}

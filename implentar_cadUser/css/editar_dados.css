@@ -1,0 +1,151 @@
+/* Fonte */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Cor de fundo */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #1f1c2c;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    color: #6c63ff;
+}
+
+.content {
+    width: 75%;
+    padding: 20px;
+}
+
+.content h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+    background-color: #fafafa;
+}
+
+.form-group input[type="file"] {
+    padding: 8px;
+}
+
+.form-group button {
+    background-color: #6c63ff;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.form-group button:hover {
+    background-color: #5848e5;
+}
+
+/* Estilo para a foto de perfil */
+.profile-img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-img-container img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.profile-img-container .btn-upload {
+    background-color: #6c63ff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.profile-img-container .btn-upload:hover {
+    background-color: #5848e5;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    color: #333;
+    background-color: #f4f4f4;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

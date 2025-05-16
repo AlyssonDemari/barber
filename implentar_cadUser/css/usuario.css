@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f7fc;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+header {
+    background-color: #6c63ff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    margin: 20px;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    position: sticky;
+    top: 0;
+}
+
+.sidebar h3 {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    color: #6c63ff;
+}
+
+.content {
+    flex: 1;
+    margin-left: 30px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    background: #fff;
+    color: #333;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 280px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.icon {
+    font-size: 40px;
+    color: #6c63ff;
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #6c63ff;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #5848e5;
+}
+
+footer {
+    background-color: #f4f7fc;
+    text-align: center;
+    padding: 10px;
+    color: #333;
+    font-size: 0.9em;
+    margin-top: auto;
+}
